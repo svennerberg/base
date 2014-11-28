@@ -68,16 +68,29 @@ module.exports = function(grunt) {
             }
         },
 
-          processhtml: {
-            options: {
-                // Task-specific options go here.
-            },
-            dist: {
-                files: {
-                    'build/index.php': ['index.php']
-                }
-            }
-        },
+		processhtml: {
+			options: {
+				// Task-specific options go here.
+			},
+			dist: {
+				files: {
+					'build/index.php': ['index.php']
+				}
+			}
+		},
+
+		'ftp-deploy': {
+			build: {
+				auth: {
+					host: 'ftpcluster.loopia.se',
+					//port: 21,
+					authKey: 'test_env'
+				},
+				src: 'build',
+				dest: '/',
+				//exclusions: ['path/to/source/folder/**/.DS_Store', 'path/to/source/folder/**/Thumbs.db', 'path/to/dist/tmp']
+			}
+		}
 
 	});
 
@@ -90,12 +103,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-processhtml');
-	//grunt.loadNpmTasks('grunt-ftp-deploy');
+	grunt.loadNpmTasks('grunt-ftp-deploy');
 
 	// 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
 	grunt.registerTask('default', ['concat', 'uglify', 'imagemin']);
 
 	grunt.registerTask('build', ['clean', 'concat', 'uglify', 'cssmin', 'imagemin', 'copy', 'processhtml']);
 	grunt.registerTask('reset', ['clean']);
+	grunt.registerTask('deploy', ['ftp-deploy']);
 
 };
