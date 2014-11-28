@@ -1,4 +1,4 @@
-base
-====
+# Base boilerplate
 
-Boilerplate for my projects
+
+A boilerplate for my own projects
