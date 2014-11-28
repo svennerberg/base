@@ -99,17 +99,15 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-processhtml');
 	grunt.loadNpmTasks('grunt-ftp-deploy');
 
 	// 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-	grunt.registerTask('default', ['concat', 'uglify', 'imagemin']);
-
 	grunt.registerTask('build', ['clean', 'concat', 'uglify', 'cssmin', 'imagemin', 'copy', 'processhtml']);
 	grunt.registerTask('reset', ['clean']);
 	grunt.registerTask('deploy', ['ftp-deploy']);
+	grunt.registerTask('default', ['build']);
 
 };
