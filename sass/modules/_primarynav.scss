@@ -1,0 +1,19 @@
+.primarynav {
+	float: right;
+
+}
+
+.primarynav-menu {
+	@include clearfix();
+}
+
+.primarynav-menuitem {
+	float: left;
+
+	a {
+		display: block;
+		padding: 0 $padding;
+		height: $siteHeaderHeight;
+		line-height: $siteHeaderHeight;
+	}
+}

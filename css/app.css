@@ -1,0 +1,315 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/core/_helpers.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 4, ../sass/core/_helpers.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 8, ../sass/core/_helpers.scss */
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  /* line 12, ../sass/core/_helpers.scss */
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+/*
+	Based on a 1.333 - Perfect Fourth Scale
+	http://type-scale.com/?size=16&scale=1.333&text=A%20Visual%20Type%20Scale&webfont=Libre+Baskerville&font-family=Verdana&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333
+*/
+/* line 6, ../sass/core/_typography.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  /* Prevent font scaling in landscape */
+}
+
+/* line 11, ../sass/core/_typography.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+/* line 3, ../sass/core/_grid.scss */
+.grid-row {
+  max-width: 1280px;
+  margin: 0 auto 30px;
+  *zoom: 1;
+}
+/* line 6, ../sass/core/_mixins.scss */
+.grid-row:before, .grid-row:after {
+  content: " ";
+  display: table;
+}
+/* line 7, ../sass/core/_mixins.scss */
+.grid-row:after {
+  clear: both;
+}
+/* line 8, ../sass/core/_grid.scss */
+.grid-row.no-margin {
+  margin-bottom: 0;
+}
+/* line 12, ../sass/core/_grid.scss */
+.grid-row img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 19, ../sass/core/_grid.scss */
+.grid-column-1 {
+  width: 8.3333333333%;
+}
+
+/* line 22, ../sass/core/_grid.scss */
+.grid-column-2 {
+  width: 16.666666666%;
+}
+
+/* line 25, ../sass/core/_grid.scss */
+.grid-column-3 {
+  width: 25%;
+}
+
+/* line 28, ../sass/core/_grid.scss */
+.grid-column-4 {
+  width: 33.333333333%;
+}
+
+/* line 31, ../sass/core/_grid.scss */
+.grid-column-5 {
+  width: 41.666666666%;
+}
+
+/* line 34, ../sass/core/_grid.scss */
+.grid-column-6 {
+  width: 50%;
+}
+
+/* line 37, ../sass/core/_grid.scss */
+.grid-column-7 {
+  width: 58.3333333333%;
+}
+
+/* line 40, ../sass/core/_grid.scss */
+.grid-column-8 {
+  width: 66.6666666666%;
+}
+
+/* line 43, ../sass/core/_grid.scss */
+.grid-column-9 {
+  width: 75%;
+}
+
+/* line 46, ../sass/core/_grid.scss */
+.grid-column-10 {
+  width: 83.333333333%;
+}
+
+/* line 49, ../sass/core/_grid.scss */
+.grid-column-11 {
+  width: 91.666666666%;
+}
+
+/* line 52, ../sass/core/_grid.scss */
+.grid-column-12 {
+  display: block;
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+/* line 58, ../sass/core/_grid.scss */
+.grid-column-12:last-child {
+  float: none;
+}
+
+/* line 64, ../sass/core/_grid.scss */
+[class*="grid-column-"] {
+  float: left;
+  min-height: 1%;
+  position: relative;
+  padding-right: 30px;
+}
+/* line 70, ../sass/core/_grid.scss */
+[class*="grid-column-"]:last-of-type {
+  padding-right: 0;
+}
+/* line 75, ../sass/core/_grid.scss */
+[class*="grid-column-"] + [class*="grid-column-"]:last-child {
+  float: right;
+}
+/* line 79, ../sass/core/_grid.scss */
+[class*="grid-column-"] + [class*="grid-column-"].end {
+  float: left;
+}
+@media (max-width: 1024px) {
+  /* line 64, ../sass/core/_grid.scss */
+  [class*="grid-column-"] {
+    float: none !important;
+    width: auto;
+    padding: 0;
+    margin: 0 0 15px !important;
+  }
+  /* line 89, ../sass/core/_grid.scss */
+  [class*="grid-column-"]:last-child {
+    float: none;
+  }
+}
+/* line 94, ../sass/core/_grid.scss */
+[class*="grid-column-"] img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 1, ../sass/core/_layout.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/core/_layout.scss */
+body {
+  background-color: white;
+}
+
+/* line 8, ../sass/core/_layout.scss */
+.wrapper {
+  max-width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 30px;
+  padding-top: 70px;
+}
+
+/* line 1, ../sass/modules/_primarynav.scss */
+.primarynav {
+  float: right;
+}
+
+/* line 6, ../sass/modules/_primarynav.scss */
+.primarynav-menu {
+  *zoom: 1;
+}
+/* line 6, ../sass/core/_mixins.scss */
+.primarynav-menu:before, .primarynav-menu:after {
+  content: " ";
+  display: table;
+}
+/* line 7, ../sass/core/_mixins.scss */
+.primarynav-menu:after {
+  clear: both;
+}
+
+/* line 10, ../sass/modules/_primarynav.scss */
+.primarynav-menuitem {
+  float: left;
+}
+/* line 13, ../sass/modules/_primarynav.scss */
+.primarynav-menuitem a {
+  display: block;
+  padding: 0 30px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* line 1, ../sass/modules/_siteheader.scss */
+.siteheader {
+  background-color: #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 9, ../sass/modules/_siteheader.scss */
+.siteheader-inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* line 16, ../sass/modules/_siteheader.scss */
+.siteheader-logo {
+  margin: 0;
+  float: left;
+  line-height: 40px;
+}

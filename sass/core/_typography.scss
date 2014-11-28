@@ -1,0 +1,16 @@
+/*
+	Based on a 1.333 - Perfect Fourth Scale
+	http://type-scale.com/?size=16&scale=1.333&text=A%20Visual%20Type%20Scale&webfont=Libre+Baskerville&font-family=Verdana&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333
+*/
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+}
+
+body {
+	font-family: $bodyFont;
+	color: $textColor;
+	font-size: $fontSize;
+	line-height: 1.45;
+}

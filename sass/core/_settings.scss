@@ -1,0 +1,76 @@
+// Typography
+$headlineFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headingFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$bodyFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$fontSize: 16px;
+$textColor: #000;
+
+// Colors
+$black: #000;
+$white: #fff;
+$accentColor: #cbb727;
+
+$darkGrey: #4a5f62;
+$warmGrey: #808687;
+$mediumGrey: #869496;
+$grey: #e6e9ea;
+$lightGrey: #f3f4f4;
+$alertColor: #d16147;
+$hintColor: $darkGrey;
+
+$mainBackgroundColor: #fff;
+
+
+$siteHeaderBackgroundColor: $white;
+$siteHeaderTextColor: $black;
+$siteHeaderWidth: 225px;
+$siteHeaderMobileHeight: 100px;
+
+$linkTextColor: $textColor;
+$linkHoverTextColor:  $textColor;
+$linkActiveTextColor:  $textColor;
+
+$buttonBackgroundColor: $accentColor;
+$buttonTextColor: $white;
+$buttonHoverBackgroundColor: darken($accentColor, 10%);
+$buttonHoverTextColor: $white;
+$buttonActiveBackgroundColor: darken($accentColor, 20%);
+$buttonActiveTextColor: $white;
+
+
+$inputBackgroundColor: $white;
+$inputColor: $black;
+$inputBorderColor: #ccc;
+$inputFocusBorderColor: $mediumGrey;
+$inputDisabledBackgroundColor: $lightGrey;
+
+
+$primarynavHoverColor: #c49416;
+$primaryNavActiveColor: $primarynavHoverColor;
+
+// Grid
+
+$gridGutter: 30px;
+$gridCellPadding: $gridGutter / 2;
+
+
+// Siteheader
+$siteHeaderHeight: 40px;
+
+// Measurments
+$borderRadius: 0;
+$buttonHeight: 62px;
+$controlHeight: 44px;
+
+$maxWidth: 1280px;
+$minWidth: 320px;
+
+$defaultMargin: 15px;
+
+$padding: 30px;
+$halfPadding: $padding / 2;
+$negativePadding: -1 * $padding;
+
+$mobilePadding: 15px;
+$negativeMobilePadding: -1 * $mobilePadding;

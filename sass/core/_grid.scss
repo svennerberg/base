@@ -1,0 +1,99 @@
+// Grid
+
+.grid-row {
+	max-width: $maxWidth;
+	margin: 0 auto $padding;
+	@include clearfix();
+
+	&.no-margin {
+		margin-bottom: 0;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+
+.grid-column-1 {
+	width: 8.3333333333%;
+}
+.grid-column-2 {
+	width: 16.666666666%;
+}
+.grid-column-3 {
+	width: 25%;
+}
+.grid-column-4 {
+	width: 33.333333333%;
+}
+.grid-column-5 {
+	width: 41.666666666%;
+}
+.grid-column-6 {
+	width: 50%;
+}
+.grid-column-7 {
+	width: 58.3333333333%;
+}
+.grid-column-8 {
+	width: 66.6666666666%;
+}
+.grid-column-9 {
+	width: 75%;
+}
+.grid-column-10 {
+	width: 83.333333333%;
+}
+.grid-column-11 {
+	width: 91.666666666%;
+}
+.grid-column-12 {
+	display: block;
+	float: none;
+	width: 100%;
+	margin: 0;
+
+	&:last-child {
+		float: none;
+	}
+
+}
+
+[class*="grid-column-"] {
+	float: left;
+	min-height: 1%;
+	position: relative;
+	padding-right: $gridGutter;
+
+	&:last-of-type {
+		padding-right: 0;
+	}
+
+
+	+ [class*="grid-column-"]:last-child {
+		float: right;
+	}
+
+	+ [class*="grid-column-"].end {
+		float: left;
+	}
+
+	 @include breakpoint(medium) {
+	    float: none !important;
+	    width: auto;
+	    padding: 0;
+	    margin: 0 0 $defaultMargin !important;
+
+	    &:last-child {
+			float: none;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+}

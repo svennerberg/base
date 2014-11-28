@@ -1,0 +1,14 @@
+*, *:before, *:after {
+	@include box-sizing(border-box);
+}
+
+body {
+	background-color: $mainBackgroundColor;
+}
+.wrapper {
+	max-width: $maxWidth;
+	min-width: $minWidth;
+	margin: 0 auto;
+	padding: $padding;
+	padding-top: $siteHeaderHeight + $padding;
+}

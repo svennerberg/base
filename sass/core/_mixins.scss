@@ -1,0 +1,224 @@
+//
+// Mina mixins
+// --------------------------------------------------
+@mixin clearfix() {
+  *zoom:1;
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
+// We use this to create equilateral triangles
+@mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset $triangle-size;
+  @if ($triangle-direction == top) {
+    border-color: $triangle-color transparent transparent transparent;
+    border-top-style: solid;
+  }
+  @if ($triangle-direction == bottom) {
+    border-color: transparent transparent $triangle-color transparent;
+    border-bottom-style: solid;
+  }
+  @if ($triangle-direction == left) {
+    border-color: transparent transparent transparent $triangle-color;
+    border-left-style: solid;
+  }
+  @if ($triangle-direction == right) {
+    border-color: transparent $triangle-color transparent transparent;
+    border-right-style: solid;
+  }
+}
+
+// Breakpoints
+@mixin breakpoint($point) {
+   
+    @if $point == large {
+      @media (max-width: 1280px) { @content; }
+    }
+
+    @else if $point == medium {
+      @media (max-width: 1024px) { @content; }
+    }
+
+    @else if $point == small {
+      @media (max-width: 640px)  { @content; }
+    }
+
+    @else if $point == tiny {
+      @media (max-width: 320px)  { @content; }
+    }
+
+    @else {
+      @media (max-width: $point) { @content; }
+    }
+
+}
+
+
+// Flexible grid
+
+@mixin grid-row {
+  width: 100%;
+  margin: 0 auto;
+  @include clearfix();
+}
+
+@mixin grid-column($count) {
+  margin-left: 4.4%;
+  float: left;
+  min-height: 1px;
+  position: relative;
+
+  @if $count == 1 {
+    width: 4.3%;
+    *width: 4.2%;
+  }
+  @else if $count == 2 {
+    width: 13%;
+    *width: 12.9%;
+  }
+  @else if $count == 3 {
+    width: 21.68%;
+    *width: 21.58%;
+  }
+  @else if $count == 4 {
+    width: 30.37%;
+    *width: 30.27%;
+  }
+  @else if $count == 5 {
+    width: 39.1%;
+    *width: 39.0%;
+  }
+  @else if $count == 6 {
+    width: 47.8%;
+    *width: 47.7%;
+  }
+  @else if $count == 7 {
+    width: 56.5%;
+    *width: 56.4%;
+  }
+  @else if $count == 8 {
+    width: 62.5%;
+    *width: 62.4%;
+  }
+  @else if $count == 9 {
+    width: 73.9%;
+    *width: 73.8%;
+  }
+  @else if $count == 10 {
+    width: 82.6%;
+    *width: 82.5%;
+  }
+  @else if $count == 11 {
+    width: 91.3%;
+    *width: 91.2%;
+  }
+  @else if $count == 12 {
+    width: 100%;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+}
+
+@mixin grid-reset() {
+  float: none;
+  width: auto;
+  margin-left: 0;
+}
+
+
+// Block grids
+
+@mixin block-grid($count) {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  list-style: none;
+
+  @if $count == 1 {
+    margin-left: 0;
+  }
+  @if $count == 2 {
+    margin-left: -4%;
+  }
+  @if $count == 3 {
+    margin-left: -2%;
+  }
+  @if $count == 4 {
+    margin-left: -2%;
+  }
+  @if $count == 5 {
+    margin-left: -1.5%;
+  }
+  @if $count == 6 {
+    margin-left: -1%;
+  }
+  > li {
+    @include block-grid-li($count);
+  }
+}
+
+@mixin block-grid-reset() {
+  > li {
+    @include block-grid-li(1);
+  }
+}
+
+@mixin block-grid-li($count) {
+  display: block;
+  height: auto;
+  float: left;
+
+  @if $count == 1 {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  @if $count == 2 {
+    margin-left: 4%;
+    margin-bottom: 4%;
+    width: 46%;
+    *width: 45.9%;
+  }
+  @if $count == 3 {
+    margin-left: 2%;
+    margin-bottom: 2%;
+    width: 31.3%;
+    *width: 31.2%;
+  }
+  @if $count == 4 {
+    margin-left: 2%;
+    margin-bottom: 2%;
+    width: 23%;
+   *width: 22.9%;
+  }
+  @if $count == 5 {
+    margin-left: 1.5%;
+    margin-bottom: 1.5%;
+    width: 18.5%;
+    *width: 18.4%;
+  }
+  @if $count == 6 {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    width: 15.66666%;
+    *width: 15.5%;
+  }
+
+  &:nth-of-type(n) { clear: none; }
+  &:nth-of-type(#{$count}n+1) { clear: both; }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
